@@ -1,0 +1,165 @@
+:root {
+    --pink: #ff9edb;
+    --dark-pink: #fec0cd;
+    --light-purple: #d2c7ff;
+    --dark-purple: #250c2a;
+    --green: #a7e8d4;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: var(--light-purple); */
+    color: var(--dark-purple);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3vw;
+    position: sticky;
+    top: 0;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+}
+
+nav > ul > li {
+    padding-right: 30px;
+    text-align: center;
+}
+
+#booking-landing-page {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background:linear-gradient(to right bottom,var(--green), var(--light-purple), var(--pink)); */
+    background-image: url("../img/white-eyelash.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 12.5vh 0;
+}
+
+#booking-landing-page h1{
+    font-size: 3.236rem;
+    color: var(--dark-purple);
+}
+
+
+#booking-policy-section {
+    display: flex;
+}
+
+
+#booking-policy-section > div {
+    width: 50%;
+    padding: 10vh 0;
+}
+
+#booking-policy-section > div > h1 {
+    text-align: center;
+    font-size: 1.616rem;
+}
+
+
+#booking-policy-section > img {
+    width: 50%;
+    height: 80vh;
+}
+
+#booking-policy-section ul {
+    padding: 0 10%;
+}
+
+#booking-policy-section ul li {
+    padding: 3vh 0;
+}
+
+
+#book-an-appointment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw;
+    background: linear-gradient(to right, var(--light-purple), var(--pink));
+    height: 50vh;
+    margin: 0 auto;
+}
+
+#book-an-appointment > h1 {
+    font-size: 1.618rem;
+    margin: 2vh 0;
+}
+
+#book-an-appointment > p {
+    width: 50%;
+    margin-bottom: 2vh;
+}
+
+#book-an-appointment > ul {
+    list-style: none;
+    display: flex;
+    align-self: baseline;
+}
+
+#book-an-appointment > ul > li {
+    padding-right: 20px;
+}
+
+#book-an-appointment > ul > li img {
+    height: 48px;
+    width: 48px;
+}
+
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+    nav {
+        padding: 0;
+        flex-direction: column-reverse;
+        height: auto;
+        position: static;
+        background-color: var(--pink);
+    }
+    nav > h1 {
+        padding:20px;
+        width: 100%;
+        text-align: center;
+        background-color: var(--light-purple);
+    }
+
+    nav > ul {
+        flex-direction: column;
+        padding: 10px 0 ;
+    }
+
+    nav > ul > li {
+        padding: 0;
+    }
+
+    #booking-policy-section {
+        flex-direction: column;
+    }
+
+    #booking-policy-section > div {
+        width: 100%;
+        padding: 0;
+    }
+
+    #booking-policy-section > img {
+        display: none;
+    }
+}

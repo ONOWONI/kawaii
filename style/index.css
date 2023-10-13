@@ -1,0 +1,369 @@
+/* 1.618 
+    3.236
+    for the price picture the dimentions are
+    763 x761
+    */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --pink: hsl(322, 100%, 81%);
+    --dark-pink: #fec0cd;
+    --light-purple: #d2c7ff;
+    --dark-purple: #250c2a;
+    --green: #a7e8d4;
+    --white: #ffffff;
+}
+
+body {
+    background-color:#fff1ed;
+    color: var(--dark-purple);
+}
+
+nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    height: 15vh;
+    padding-left:5vw;
+}
+
+
+nav > img {
+    height: 90%;
+}
+
+nav > a {
+    display: none;
+}
+
+
+#landing-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-color: var(--light-purple);
+}
+
+#landing-page > div {
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(to right, hsla(322, 0%, 0%, 0.3), hsla(322, 0%, 0%, 0.3)), url("../img/black-eyelash.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 3vw 5vw;
+    color: var(--white);
+}
+
+#landing-page ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#landing-page  ul > li {
+    text-align: center;
+    padding-right: 30px;
+}
+
+#landing-page  ul > li > a {
+    text-decoration: none;
+    color: var(--dark-purple);
+}
+
+#landing-page div > h1 {
+    font-size: 3.236rem;
+    margin: 18px 0;
+}
+
+#landing-page div > p {
+    margin-bottom: 18px;
+}
+
+.Cta-btn {
+    padding: 20px 40px;
+    font-size: 1.618rem;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+    color: var(--dark-purple);
+    background-color: var(--pink);
+}
+
+
+
+#about-section {
+    padding: 5vw;
+}
+
+#about-section h1 {
+    font-size: 3.236rem;
+    margin-bottom: 5vh;
+}
+
+#about-section p {
+    width: 50%;
+}
+#catalogue {
+    background-color: var(--pink);
+    padding-top: 100px;
+}
+
+#catalogue > h1 {
+    width: calc(75vw - 60px);
+    font-size: 3.236rem;
+    margin: 0 auto;
+    color: var(--dark-purple);
+}
+
+#catalogue-item-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 15vw;
+}
+
+.catalogue-item {
+    color: var(--dark-purple);
+    border-radius: 20px;
+    transform: translate(40px, 40px);
+    transition: all .5s;
+}
+
+.catalogue-item-animate{
+    transform: translate(0,0);
+}
+
+.catalogue-item > img {
+    padding: 10px;
+    width: 100%;
+    height: 50vh;
+    border-radius: 20px;
+}
+
+.catalogue-item > div {
+    padding: 10px;
+}
+
+.catalogue-item > div > h1 {
+    font-size: 1.618rem;
+    padding-bottom: 20px;
+}
+
+#catalogue > p {
+    padding: 50px;
+    text-align: center;
+}
+
+#pricing {
+    padding: 100px 0;
+    display: flex;
+}
+
+#pricing img {
+    width: 50%;
+}
+
+#prices-container {
+    padding: 0 10%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#prices-container > h1 {
+    font-size: 3.236rem;
+    margin-bottom: 5%;
+}
+
+#prices-container > div {
+    display: flex;
+    font-size: 1.618rem;
+    justify-content: space-between;
+    margin-bottom: 8%;
+}
+
+
+#prices-container > p{
+    text-align: center;
+}
+
+#prices-container > a {
+    margin: 5% auto;
+}
+
+#reviews-section > h1 {
+    text-align: center;
+    font-size: 3.236rem;
+}
+
+#reviews-section > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.previous , .next {
+  cursor: pointer;
+}
+
+
+.slides-container {
+    display: flex;
+    justify-content: center;
+    /* max-width: 1000px; */
+}
+
+@keyframes fades {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+
+.fade {
+    animation: fades 2s;
+}
+
+.slide {
+    display: none;
+  }
+
+.slide p {
+    width: 50vw;
+    text-align: center;
+}
+
+
+footer {
+    background-color: var(--pink);
+    padding: 1vw 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > img {
+    height: 10vh;
+    width: 10vh;
+    margin-bottom: 24px;
+}
+#business-name {
+    margin-bottom: 18px;
+}
+
+footer > ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 18px;
+}
+
+footer > ul > li {
+    padding: 0 1vw;
+}
+
+footer > ul > li img {
+    height: 48px;
+    width: 48px;
+}
+
+
+#copyright-text {
+    text-align: center;
+}
+
+
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    body {
+        color: var(--dark-purple);
+    }
+    nav {
+        padding: 0 5vw;
+        /* flex-direction: column; */
+        height: 12vh;
+        justify-content: space-between;
+        /* align-items: baseline; */
+    }
+
+    nav img {
+        height: 10vh;
+        /* padding-bottom: 1vh; */
+    }
+
+    #landing-page ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    #landing-page ul > li {
+        padding: 0 2px;
+        text-align: left;
+        /* padding-bottom: 6px; */
+    }
+
+    #landing-page > div {
+        height: 88vh;
+        background-position: left;
+        padding: 0 0 20vw 5vw;
+    }
+
+    .Cta-btn {
+        padding: 10px 20px;
+    }
+
+    #about-section p {
+        width: 100%;
+    }
+
+    #catalogue > h1 {
+        width: 100vw;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    #catalogue-item-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pricing {
+        flex-direction: column;
+    }
+
+    #prices-container {
+        width: 100%;
+    }
+
+    #pricing img {
+        display: none;
+    }
+
+    .slides-container {
+        padding: 0;
+    }
+}
