@@ -111,7 +111,7 @@ nav > a {
 }
 
 .Cta-btn {
-    padding: 10px 40px;
+    padding: 15px 40px;
     font-size: 1.618rem;
     width: fit-content;
     height: fit-content;
@@ -374,7 +374,7 @@ footer > ul > li img {
 
 
     .Cta-btn {
-        padding: 30px 40px;
+        padding: 10px 40px;
     }
 
     #about-section p {
