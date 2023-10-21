@@ -51,28 +51,11 @@ nav > a {
     background-color: var(--light-purple);
 }
 
-/* #landing-page > div {
-    width: 100%;
-    height: 85vh;
-    background: url("../img/double-2-eye.jpg"), url("../img/double-1-eye.jpg");
-    background-size: cover;
-    background-size: 100vw;
-    background-position: right bottom, left top;
-    background-repeat: no-repeat, no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 3vw 5vw;
-    color: var(--white);
-} */
-
 #landing-page > div {
     width: 100%;
     height: 85vh;
     display: flex;
     flex-direction: column;
-    /* padding: 0 5vw; */
     justify-content: center;
     align-items: center;
 }
@@ -128,7 +111,7 @@ nav > a {
 }
 
 .Cta-btn {
-    padding: 20px 40px;
+    padding: 10px 40px;
     font-size: 1.618rem;
     width: fit-content;
     height: fit-content;
