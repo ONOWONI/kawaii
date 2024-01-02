@@ -10,7 +10,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 :root {
-    --pink: hsl(322, 100%, 81%);
+    --pink: #ff9edb;
     --dark-pink: #fec0cd;
     --light-purple: #d2c7ff;
     --dark-purple: #250c2a;
@@ -30,7 +30,7 @@ nav {
     align-items: center;
     top: 0;
     height: 15vh;
-    padding-left:5vw;
+    padding-left:10%;
 }
 
 
@@ -38,49 +38,12 @@ nav > img {
     height: 90%;
 }
 
+nav > ul > li > img {
+    width: 25px;
+}
+
 nav > a {
     display: none;
-}
-
-
-#landing-page {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-position: center;
-    background-color: var(--light-purple);
-}
-
-#landing-page > div {
-    width: 100%;
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.landing-img {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 0 10px 10px 0;
-}
-
-.landing-img > img {
-    border-radius: 0 10px 10px 0;
-    width: 50%;
-}
-
-#eyelashbg2 {
-    border-radius: 10px 0 0 10px;
-}
-
-
-#landing-page > div > .landing-text {
-    padding: 5vh 5vw;
-    text-align: center;
 }
 
 #landing-page ul {
@@ -101,9 +64,68 @@ nav > a {
     color: var(--dark-purple);
 }
 
+
+#landing-page {
+    height: 100vh;
+    display: flex;
+    background-color: var(--pink);
+    background-image: linear-gradient(19deg, var(--green) 0%, var(--pink) 100%);
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#landing-page > div {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 1% 5%;
+}
+
+
+.landing-img {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+
+#eyelashbg1, #eyelashbg2 {
+    border-radius: 10px;
+    height: 50%;
+    width: calc(100% - 5px);
+}
+
+
+#landing-page > div > .landing-text {
+    padding: 5vh 0;
+    width: 40%;
+    border-radius: 0 0 50px 50px;
+}
+
+.landing-text > * {
+    text-align: center;
+}
+
+
+
+
 #landing-page div > h1 {
     font-size: 3.236rem;
     margin-bottom: 18px;
+}
+
+#landing-page div > h1 > span {
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #landing-page div > p {
@@ -118,8 +140,22 @@ nav > a {
     text-decoration: none;
     color: var(--dark-purple);
     background-color: var(--pink);
+    border-radius: 10px;
+    transition: .51s all;
 }
 
+.Cta-btn:hover {
+    background-color: var(--dark-purple);
+    color: var(--pink);
+    border-radius: 50px;
+}
+
+.landing-text > a {
+    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
 
 
 #about-section {
@@ -330,6 +366,10 @@ footer > ul > li img {
         height: 10vh;
     }
 
+    nav > ul > li > img {
+        height: 20px;
+    }
+
     #landing-page ul{
         flex-direction: column;
         justify-content: center;
@@ -344,7 +384,7 @@ footer > ul > li img {
 
     #landing-page > div {
         height: 85vh;
-        padding: 0 5vw;
+        padding: 2vh 5vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -353,11 +393,16 @@ footer > ul > li img {
 
     .landing-img {
         flex-direction: column;
+        width: 100%;
+        height: auto;
     }
 
     .landing-img > img {
-        width: 100%;
         border-radius: 10px;
+    }
+
+    #eyelashbg1, #eyelashbg2 {
+        width: 100%;
     }
 
     #eyelashbg2 {
@@ -366,6 +411,9 @@ footer > ul > li img {
 
     #landing-page > div > .landing-text {
         text-align: center;
+        width: 100%;
+        height: 60%;
+        background-color: transparent;
     }
 
     #landing-page > div > .landing-text > p {
@@ -374,7 +422,10 @@ footer > ul > li img {
 
 
     .Cta-btn {
-        padding: 10px 40px;
+        padding: 15px 40px;
+    }
+    .landing-text > a {
+        width: 80%;
     }
 
     #about-section p {
@@ -392,6 +443,10 @@ footer > ul > li img {
         flex-direction: column;
         padding: 0 5vw;
         overflow: hidden;
+    }
+
+    .catalogue-item > img {
+        height: 60vh;
     }
 
 
