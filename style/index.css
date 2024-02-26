@@ -1,5 +1,6 @@
 /* 1.618 
     3.236
+    6.472;
     for the price picture the dimentions are
     763 x761
     */
@@ -7,7 +8,8 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: hatton-ultralight;
+    font-weight: 600;
 }
 :root {
     --pink: #ff9edb;
@@ -17,6 +19,31 @@
     --green: #a7e8d4;
     --white: #ffffff;
 }
+
+
+@font-face {
+    font-family: headding-font;
+    src: url(../fonts/SaolDisplay-LightItalic.ttf);
+}
+
+
+@font-face {
+    font-family: hatton-ultralight;
+    src: url(../fonts/PP\ Hatton\ Ultralight.ttf);
+}
+
+
+@font-face {
+    font-family: sub-text;
+    src: url(../fonts/SaolDisplay-LightItalic.ttf);
+}
+
+
+@font-face {
+    font-family: margo;
+    src: url(../fonts/Margo.ttf);
+}
+
 
 body {
     background-color:#fff1ed;
@@ -30,7 +57,9 @@ nav {
     align-items: center;
     top: 0;
     height: 15vh;
-    padding-left:10%;
+    /* padding-left:10%; */
+    width: 80%;
+    margin: 0 auto;
 }
 
 
@@ -66,109 +95,97 @@ nav > a {
 
 
 #landing-page {
-    height: 100vh;
     display: flex;
     background-color: var(--pink);
-    background-image: linear-gradient(19deg, var(--green) 0%, var(--pink) 100%);
+    background-image: linear-gradient( to right bottom, var(--light-purple), var(--pink));
     flex-direction: column;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#landing-page > div {
+.landing-page-content {
     width: 100%;
-    height: 85vh;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5% 1% 5%;
-}
-
-
-.landing-img {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 50%;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 10px 10px 0 0;
+    justify-content: space-between;
+}
+
+.landing-text {
+    padding: 5% 10%;
+    /* text-align: center; */
+}
+
+.landing-text h1{
+    font-size: 6.472rem;
+    font-family: headding-font;
+    font-weight: 100;
+}
+
+.landing-text span {
+    font-family: headding-font;
+    font-weight: 100;
+
+}
+
+.landing-text p {
+    padding-bottom: 45px;
+    font-size: 1.618rem;
+    font-family: sub-text;
+    font-weight: 100;
 }
 
 
-#eyelashbg1, #eyelashbg2 {
-    border-radius: 10px;
-    height: 50%;
-    width: calc(100% - 5px);
-}
-
-
-#landing-page > div > .landing-text {
-    padding: 5vh 0;
-    width: 40%;
-    border-radius: 0 0 50px 50px;
-}
-
-.landing-text > * {
-    text-align: center;
-}
-
-
-
-
-#landing-page div > h1 {
-    font-size: 3.236rem;
-    margin-bottom: 18px;
-}
-
-#landing-page div > h1 > span {
-
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-#landing-page div > p {
-    margin-bottom: 30px;
-}
 
 .Cta-btn {
+    font-family: margo;
     padding: 15px 40px;
     font-size: 1.618rem;
+    font-weight: 100;
     width: fit-content;
     height: fit-content;
     text-decoration: none;
     color: var(--dark-purple);
     background-color: var(--pink);
-    border-radius: 10px;
+    border-radius: 50px;
     transition: .51s all;
 }
 
 .Cta-btn:hover {
     background-color: var(--dark-purple);
     color: var(--pink);
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
-.landing-text > a {
-    display: block;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
+.landing-img {
+    width: 100%;
 }
 
+.landing-img img {
+    width: 100%;
+}
+
+#eyelashbg2, #eyelashbg3 {
+    display: none;
+}
 
 #about-section {
     padding: 5vw;
+    text-align: center;
 }
 
 #about-section h1 {
     font-size: 3.236rem;
     margin-bottom: 5vh;
+    font-family: headding-font;
 }
 
 #about-section p {
     width: 50%;
+    margin: 0 auto;
+    font-family: hatton-ultralight;
+    font-size: 1.618rem;
+    font-weight: 900;
 }
 #catalogue {
     background-color: var(--pink);
@@ -176,17 +193,19 @@ nav > a {
 }
 
 #catalogue > h1 {
-    width: calc(75vw - 60px);
+    text-align: center;
+    font-family: headding-font;
     font-size: 3.236rem;
-    margin: 0 auto;
     color: var(--dark-purple);
 }
 
 #catalogue-item-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 0 15vw;
+    gap: 70px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 10vw;
 }
 
 .catalogue-item {
@@ -203,7 +222,7 @@ nav > a {
 .catalogue-item > img {
     padding: 10px;
     width: 100%;
-    height: 50vh;
+    height: 55vh;
     border-radius: 20px;
 }
 
@@ -239,6 +258,7 @@ nav > a {
 }
 
 #prices-container > h1 {
+    /* font-family: headding-font; */
     font-size: 3.236rem;
     margin-bottom: 5%;
 }
@@ -347,7 +367,7 @@ footer > ul > li img {
 }
 
 
-
+/* ############## Mobile Media queries ################ */
 @media (max-width: 600px) {
     html {
         font-size: 12px;
@@ -356,8 +376,14 @@ footer > ul > li img {
     body {
         color: var(--dark-purple);
     }
+
+    #landing-page {
+        background: radial-gradient(var(--pink), var(--light-purple));
+    }
     nav {
-        padding: 0 5vw;
+        margin:0;
+        padding: 0 5%;
+        width: 100%;
         height: 12vh;
         justify-content: space-between;
     }
@@ -373,7 +399,7 @@ footer > ul > li img {
     #landing-page ul{
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: flex-end;
         padding: 0;
     }
 
@@ -382,26 +408,34 @@ footer > ul > li img {
         text-align: left;
     }
 
-    #landing-page > div {
+    .landing-page-content {
         height: 85vh;
-        padding: 2vh 5vw;
+        padding: 1vh ;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
-        gap: 5px;
+        /* gap: 5px; */
+        justify-content: space-around;
     }
 
     .landing-img {
+        display: flex;
         flex-direction: column;
         width: 100%;
         height: auto;
+        gap: 10px;
     }
 
     .landing-img > img {
         border-radius: 10px;
     }
 
-    #eyelashbg1, #eyelashbg2 {
+    #eyelashbg1 {
+        display: none;
+    }
+
+    #eyelashbg2, #eyelashbg3 {
+        display: block;
         width: 100%;
     }
 
@@ -409,15 +443,17 @@ footer > ul > li img {
         border-radius: 10px;
     }
 
-    #landing-page > div > .landing-text {
+    .landing-page-content > .landing-text {
         text-align: center;
         width: 100%;
-        height: 60%;
-        background-color: transparent;
     }
 
-    #landing-page > div > .landing-text > p {
-        margin-bottom: 36px;
+    .landing-text > h1 {
+        font-size: 4rem;
+    }
+
+    .landing-page-content > .landing-text > p {
+        font-size: 16px;
     }
 
 
@@ -457,6 +493,10 @@ footer > ul > li img {
 
     #prices-container {
         width: 100%;
+    }
+
+    #prices-container > h1 {
+        text-align: center;
     }
 
     #pricing img {
